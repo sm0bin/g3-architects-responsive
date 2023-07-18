@@ -132,7 +132,7 @@
   }
 
   .quick-list-images {
-      /* width: 708px; */
+      width: 708px;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 24px;
@@ -151,7 +151,7 @@
   .features {
       display: flex;
       /* gap: 54px; */
-      gap: 200px;
+      gap: 180px;
       justify-content: space-between;
       align-items: center;
       /* margin: 100px auto; */
@@ -165,7 +165,7 @@
   .features-card {
       border-radius: 8px;
       background: #FFF;
-      box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06);
+      box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
       padding: 30px;
       margin-bottom: 20px;
   }
@@ -183,7 +183,7 @@
       border-radius: 8px;
       background: #FF900E;
       text-align: center;
-      translate: -50% -50%;
+      translate: -40% -60%;
       position: absolute;
       /* bottom: -90px; */
       /* left: -160px; */
@@ -275,6 +275,10 @@
   /* Mobile Devices */
   @media screen and (max-width: 576px) {
 
+      h1 {
+          font-size: 3rem;
+      }
+
       nav,
       nav ul,
       .quick-list,
@@ -287,6 +291,7 @@
 
       .quick-list-images {
           grid-template-columns: 1fr;
+          width: 100%;
       }
 
       nav,
@@ -305,13 +310,19 @@
           box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.2);
       }
 
-      .features-image img {
+      /* .features-image img {
           width: calc(100% - 40px);
-      }
+      } */
 
       .img-edge {
+          /* position: static; */
           scale: 0.5;
-          translate: 0% 0%;
+          translate: 0% -50%;
+      }
+
+      .features-image,
+      img {
+          width: 100%;
       }
 
       .logos {
@@ -324,11 +335,16 @@
       .logos img {
           width: 40%;
       }
+
+      footer {
+          padding-left: 10px;
+          padding-right: 10px;
+      }
   }
 
 
   /* Tablet Devices */
-  @media screen and (min-width: 576px) and (max-width: 992px) {
+  @media screen and (min-width: 577px) and (max-width: 992px) {
 
       nav,
       .quick-list,
@@ -356,12 +372,22 @@
           margin-right: 0;
       }
 
+      .quick-list-images,
+      .quick-list-images img {
+          width: 100%;
+      }
+
       .features-card {
           box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.2);
       }
 
+      .features-image,
       .features-image img {
-          width: calc(50% - 40px);
+          width: 100%;
+      }
+
+      .img-edge {
+          translate: 50% -50%;
       }
 
       .logos {
@@ -371,6 +397,15 @@
           align-items: flex-start;
           flex-wrap: wrap;
       }
+
+      /* .features-image img {
+          width: 100%;
+      } */
+
+
+      /* .logos img {
+          width: 40%;
+      } */
 
       /* .logos img {
           width: 50%;
